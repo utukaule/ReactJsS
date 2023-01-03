@@ -1,0 +1,15 @@
+nav {
+    background-color: white;
+    box-shadow: 0 0 10px;
+    padding: 3rem;
+
+}
+
+nav>a {
+    font-size: 15px;
+    font-weight: 500px;
+    color:rgb(43, 43, 158);
+    text-decoration: none;
+    margin: 1rem;
+    font-weight: 700;
+}
