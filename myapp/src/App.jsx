@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from './components/Home';
 import  About  from './components/About';
 import Contact from './components/Contact';
-
+// import Products from './components/Products';
 function App() {
     return (
     <Router>
@@ -15,6 +15,7 @@ function App() {
             <Route path='/about' element={<About/>} />
             <Route path='/contact' element={<Contact/>} />
             <Route path='*' element={<h1>Page not found</h1>}/>
+            {/* <Route path='/products/:id' element={<Products/>} /> */}
         </Routes>
         
     </Router>
