@@ -20,7 +20,7 @@ const Footer = () => {
         </VStack>
 
         <VStack w={'full'} borderLeft={['none','1px solid white']} borderRight={['none','1px solid white']}> 
-            <Heading textTransform={'uppercase'} textAlign={'center'}>Video Hub</Heading>
+            <Heading textTransform={'uppercase'} textAlign={'center'} fontSize={'20'}>Accretion Marketing Group</Heading>
             <Text>All rights received</Text>
         </VStack>
 

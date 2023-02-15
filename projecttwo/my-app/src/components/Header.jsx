@@ -29,7 +29,7 @@ function Header() {
                     <DrawerCloseButton />
 
                     <DrawerHeader>
-                        Video Hub
+                    Accretion Marketing Group
                     </DrawerHeader>
 
                     <DrawerBody>
