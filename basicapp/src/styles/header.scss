@@ -1,0 +1,21 @@
+nav{
+    width: 100%;
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    >h1{
+        padding-left: 10px;
+    }
+    >main{
+        display: flex;
+        justify-content: flex-end;
+        width: 70%;
+
+        > a{
+            padding: 10px 10px;
+        }
+    }
+    
+}
