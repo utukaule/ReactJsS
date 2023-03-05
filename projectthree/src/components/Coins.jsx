@@ -50,17 +50,17 @@ const Coins = () => {
         {loading ? <Loader /> : <>
 
 
-            <RadioGroup value={currency}>
+            <RadioGroup value={currency} onChange={setCurrency} p={'8'}>
                 <HStack spacing={'4'}>
                     {/* currency === 'inr' ? '₹' : currency === "eur" ? "€" : "$"; */}
-                    <Radio value={'inr'}>₹</Radio>
-                    <Radio value={'usd'}>$</Radio>
-                    <Radio value={'eur'}>€</Radio>
+                    <Radio value={'inr'}>INR</Radio>
+                    <Radio value={'usd'}>USD</Radio>
+                    <Radio value={'eur'}>EUR</Radio>
                 </HStack>
             </RadioGroup>
 
 
-            <HStack wrap={'wrap'}>
+            <HStack wrap={'wrap'} justifyContent={'space-evenly'}>
                 {coins.map((i) => (
                     <CoinCard
                         id={i.id}
@@ -70,7 +70,7 @@ const Coins = () => {
                         image={i.image}
                         symbol={i.symbol}
                         url={i.url}
-                        currencySymbol={i.currencySymbol}
+                        currencySymbol={currencySymbol}
                     />
                 ))}
 
@@ -78,7 +78,7 @@ const Coins = () => {
             <HStack w={'full'} overflowX={'auto'} p={'8'}>
                 {
                     btns.map((item, index) => (
-                        <Button bgColor={'blackAlpha.900'} color={'white'} onClick={() => ChangePage(index + 1)}>{index + 1}</Button>
+                        <Button key={index} bgColor={'blackAlpha.900'} color={'white'} onClick={() => ChangePage(index + 1)}>{index + 1}</Button>
                     ))
                 }
             </HStack>
