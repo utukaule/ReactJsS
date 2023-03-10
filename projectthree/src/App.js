@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CoinDetails from './components/CoinDetails';
 import Coins from './components/Coins';
 import Exchanges from './components/Exchanges';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './components/Home';
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path='/coin/:id' element={<CoinDetails />} />
 
       </Routes>
+      <Footer/>
     </Router>
   );
 }
