@@ -16,7 +16,7 @@ const Home = () => {
                 repeatType: 'reverse'
             }}
         >
-            <Image w={'full'} h={'full'} objectFit={'contain'} src={'https://images.unsplash.com/photo-1639152201720-5e536d254d81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80'} />
+            <Image w={'full'} h={'full'} objectFit={'contain'} src={'https://github.com/meabhisingh/react-crypto-app/blob/master/src/assets/btc.png?raw=true'} />
         </motion.div>
 
         <Text fontSize={'6xl'} textAlign={'center'} fontWeight={'thin'} color={'whiteAlpha.700'} pt={'0'} >CryptoFuture</Text>
