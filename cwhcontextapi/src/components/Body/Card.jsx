@@ -1,14 +1,17 @@
 import React from 'react'
+import { useContext } from 'react'
+import { CartContext } from '../../contexts/CartContext'
 
 const Card = () => {
-  return (
+    const {handleChange} = useContext(CartContext);
+    return (
     <div style={{
         width:'200px',
         height:"300px",
         padding:'10px',
         background: 'teal'
     }}>
-        <button>Add to cart</button>
+        <button onClick={()=>{handleChange(1)}}>Add to cart</button>
     </div>
   )
 }

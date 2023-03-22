@@ -3,7 +3,7 @@ import { CartContext } from '../contexts/CartContext'
 import { useContext } from 'react'
 
 const Navbar = () => {
-    const value = useContext(CartContext); //consumer here. It will return all the things 
+    const {cart} = useContext(CartContext); //consumer here. It will return all the things 
     // which are passed as value in CartContext
     //  How useContext works?
         // -> It goes to the context(CartContext) and brigs the value. 
@@ -18,7 +18,7 @@ const Navbar = () => {
             margin: "5px"
         }}>
 
-            Cart: {value}
+            Cart: {cart}
 
         </nav>
     )
