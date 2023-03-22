@@ -13,13 +13,21 @@
 // // Provider = Provider is value.
 // // Consumer = Takes the value and uses it.
 
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 export const CartContext = createContext();
 
-export const CartContextProvider = ({children}) => {
+export const CartContextProvider = ({ children }) => {
+
+    const [cart, setCart] = useState(0)
+
+    const handleChange = (inc) => {
+        setCart(cart + inc)
+    }
+    // 
+
     return (
-        <CartContext.Provider value={10}>
+        <CartContext.Provider value={{ cart, handleChange }}>
             {children}
         </CartContext.Provider>
     )
