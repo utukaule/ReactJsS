@@ -1,0 +1,16 @@
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+#images{
+    width: 100px;
+    height: 100px;
+}
+b{
+    text-align: center;
+}
