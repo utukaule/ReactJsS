@@ -1,18 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
-import {Link} from 'react-router-dom';
 
-const Navbar = (props) => {
+function NavBar(props) {
   return (
     <>
-      <nav
-        className={`navbar navbar-expand-lg bg-${props.mode} text-${props.mode}`}
-        data-bs-theme={props.mode}
-      >
-        <div className="container">
-          <Link className="navbar-brand" to="/">
+      <nav className={`navbar navbar-expand-lg bg-${props.toggle}`}>
+        <div className="container-fluid">
+          <a className="navbar-brand" href="/">
             {props.title}
-          </Link>
+          </a>
           <button
             className="navbar-toggler"
             type="button"
@@ -27,40 +22,30 @@ const Navbar = (props) => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link to="/" className="nav-link active" aria-current="page">
+                <a className="nav-link " aria-current="page" href="/">
                   Home
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <Link to="/about" className="nav-link" >
-                  About
-                </Link>
+                <a className="nav-link" href="/">
+                  Link
+                </a>
               </li>
             </ul>
-            <div className="form-check form-switch text-light">
+            <div className="form-check form-switch">
               <input
-              onClick={props.toggleMode}
                 className="form-check-input"
                 type="checkbox"
                 role="switch"
+                onClick={props.toggle}
                 id="flexSwitchCheckDefault"
               />
-              <label className={`form-check-label text-${props.mode==='dark'?'light':'dark'}`} htmlFor="flexSwitchCheckDefault">
-                Mode
-              </label>
             </div>
           </div>
         </div>
       </nav>
     </>
   );
-};
+}
 
-Navbar.prototype = {
-  title: PropTypes.string.isRequired,
-};
-Navbar.defaultProps = {
-  title: "textUtils",
-};
-
-export default Navbar;
+export default NavBar;
