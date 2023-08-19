@@ -65,7 +65,7 @@ const TextForm = (props) => {
         <div>
           <h1 style={{color:"black"}}>Your text summary</h1>
           <p style={{color:"black"}}>
-            {text.split(" ").length} words and {text.length} characters.
+            {text.split(" ").filter((ele)=>{return ele.length!==0}).length} words and {text.length} characters.
           </p>
           <p style={{color:"black"}}>{text}</p>
         </div>

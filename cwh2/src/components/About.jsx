@@ -1,28 +1,13 @@
 import React from "react";
 import { useState } from "react";
 
-const About = () => {
-  const [myStyle, setMystyle] = useState({
-    color: "white",
-    backgroundColor: "black",
-  });
-  const [btnText, setBtnText] = useState('Enable Dark Mode')
-
-  const toggleStyle = () => {
-    if (myStyle.color === "white") {
-      setMystyle({
-        color: "black",
-        backgroundColor: "white",
-      });
-      setBtnText('Enable Dark Mode')
-    } else {
-      setMystyle({
-        color: "white",
-        backgroundColor: "black",
-      });
-      setBtnText('Enable Light Mode')
-    }
-  };
+const About = (props) => {
+  
+  let myStyle = {
+    color : props.mode == "dark"?"white":"black",
+    backgroundColor: props.mode == "dark"?"grey":"white",
+  }
+ 
 
   return (
     <>
@@ -127,11 +112,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="pt-4 pb-4">
-          <button onClick={toggleStyle} className="btn btn-primary">
-            {btnText}
-          </button>
-        </div>
+        
       </div>
     </>
   );
