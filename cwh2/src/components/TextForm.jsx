@@ -36,7 +36,9 @@ const TextForm = (props) => {
           props.mode === "dark" ? "white" : "black"
         }`}
       >
-        <h4 className="mt-5">{props.heading}</h4>
+        <h4 className={`mt-5'}`} style={{
+          color:props.mode === 'dark'?'white':'black',
+        }}>{props.heading}</h4>
 
         <textarea
           className="form-control"
@@ -47,18 +49,18 @@ const TextForm = (props) => {
         ></textarea>
 
         <div className="mt-2">
-          <button className="btn btn-primary me-2" onClick={handleUpClick}>
+          <button disabled={text.length ===0} className="btn btn-primary me-2" onClick={handleUpClick}>
             To UpperCase
           </button>
 
-          <button className="btn btn-primary me-2" onClick={handleLowClick}>
+          <button disabled={text.length ===0} className="btn btn-primary me-2" onClick={handleLowClick}>
             To LowerCase
           </button>
 
-          <button className="btn btn-primary me-2" onClick={handleClearClick}>
+          <button disabled={text.length ===0} className="btn btn-primary me-2" onClick={handleClearClick}>
             To ClearText
           </button>
-          <button className="btn btn-primary " onClick={handlExtraSpaces}>
+          <button disabled={text.length ===0} className="btn btn-primary " onClick={handlExtraSpaces}>
             To Remove Extra Spaces
           </button>
         </div>
