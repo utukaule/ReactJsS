@@ -20,7 +20,7 @@ const Random = () => {
   // useEffect(() => {
   //   fecthData();
   // }, []);
-  const {gif,loading,fetchData} = useGif();
+  const { gif, loading, fetchData } = useGif();
   // function clickHandler() {
   //   fecthData();
   // }
@@ -33,7 +33,7 @@ const Random = () => {
 
         {loading ? <Spinner /> : <img src={gif} alt="" width={450} />}
         <button
-          onClick={()=>fetchData()}
+          onClick={() => fetchData()}
           className="w-10/12 bg-white opacity-90 text-lg py-2 font-bold rounded-lg mb-[15px]"
         >
           Generate
