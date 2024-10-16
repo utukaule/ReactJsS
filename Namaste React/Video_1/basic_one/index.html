@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <div id="root"></div>
+  </head>
+  <body>
+    <div id="root">not render</div>
+   
+    <script type="module" src="./script.js" ></script>
+    <!-- we have to tell browser that this is on normal file, it is module -->
+     <!-- module can import and export ok? easy na -->
     
-</body>
-<script>
-    const h1 = document.createElement('h1')
-    h1.innerHTML = "this is me namaste react" 
-
-    const root = document.getElementById('root');
-    root.appendChild(h1)
-
-</script>
+  </body>
 </html>
