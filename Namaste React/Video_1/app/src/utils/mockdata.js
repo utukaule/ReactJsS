@@ -1,16 +1,20 @@
-const data = [
-    {
-      id: "1",
-      resName: "mruterian",
-      price:'400rs',
-      review:'4.2'
-    },
-    {
-      id: "2",
-      resName: "Anna idli",
-      price:'50rs',
-      review:'4.8'
-    },
-  ];
+const resData = [
+  {
+    id: "1",
+    name: "Dominos",
+    cuisines: ["pizza", "fase food", "ameriacan"],
+    cost: "rs.400",
+    deliveryTime: 34,
+    avgRating: "4.5",
+  },
+  {
+    id: "2",
+    name: "kfc",
+    cuisines: ["pizza", "fase food", "ameriacan"],
+    cost: "rs.400",
+    deliveryTime: 34,
+    avgRating: "2.5",
+  },
+]
 
-  export default data;
+  export default resData;

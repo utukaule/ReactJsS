@@ -19,11 +19,11 @@
   padding: 10px;
 }
 
-.res-container{
+.res-container {
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
-.res-card{
+.res-card {
   margin: 5px;
   width: 200px;
   height: 300px;
@@ -31,12 +31,34 @@
   background-color: lightgray;
 }
 
-.res-card:hover{
+.res-card:hover {
   border: 1px solid black;
-
 }
 
 .filter-btn {
   margin: 10px;
   cursor: pointer;
+}
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shimmer-card {
+  margin: 10px;
+  width: 200px;
+  height: 300px;
+  background-color: lightgray;
+}
+
+.login {
+  padding: 0 20px;
+  cursor: pointer;
+}
+.search {
+  margin: 10px;
+}
+.filter {
+  display: flex;
 }
