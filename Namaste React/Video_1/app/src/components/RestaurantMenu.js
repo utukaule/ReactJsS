@@ -3,22 +3,13 @@ import Shimemr from "./Shimemr";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import {MENU_API} from '../utils/constants'
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 function RestaurantMenu() {
-  const [resInfo, setResInfo] = useState(null);
   const {resId} = useParams()
   // console.log(params)
-  useEffect(() => {
-    fetchMenu();
-  }, []);
 
-  const fetchMenu = async () => {
-    const data = await fetch(
-      `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.61610&lng=73.72860&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`
-    );
-    const json = await data.json();
-    console.log(json);
-    setResInfo(json);
-  };
+  const resInfo = useRestaurantMenu(resId)
+  
 
   if (resInfo == null) return <Shimemr />;
   const {
