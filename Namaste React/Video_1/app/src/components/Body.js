@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 // import resData from "../utils/mockdata";
 import { useEffect, useState } from "react";
 import Shimemr from "./Shimemr";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   // const [listofRestaurants, setListofRestaurant] = useState([]);
@@ -14,8 +15,7 @@ const Body = () => {
   useEffect(() => {
     fetchData();
     console.log("USEffect array");
-    
-  },[]);
+  }, []);
 
   const fetchData = async () => {
     const data = await fetch(
@@ -70,11 +70,15 @@ const Body = () => {
             Top Restaurants
           </button>
         </div>
-        
+
         {/* body to show cards */}
         <div className="res-container">
           {filterdRestaurant.map((e) => {
-            return <RestaurantCard key={e.info.id} menuName={e} />;
+            return (
+              <Link key={e.info.id} to={"/restaurants/" + e.info.id}>
+                <RestaurantCard menuName={e} />
+              </Link>
+            );
           })}
         </div>
       </div>
