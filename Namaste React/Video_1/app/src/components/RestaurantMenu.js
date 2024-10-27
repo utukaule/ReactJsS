@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import {MENU_API} from '../utils/constants'
 import useRestaurantMenu from "../utils/useRestaurantMenu";
+
 function RestaurantMenu() {
   const {resId} = useParams()
   // console.log(params)

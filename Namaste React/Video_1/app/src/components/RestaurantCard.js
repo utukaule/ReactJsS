@@ -22,4 +22,16 @@ const RestaurantCard = ({ menuName }) => {
   );
 };
 
+
+export const ratingOnTheTop = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <p>Baner</p>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
+};
+
 export default RestaurantCard;

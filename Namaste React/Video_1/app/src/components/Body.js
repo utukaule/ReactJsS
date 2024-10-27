@@ -1,9 +1,11 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { ratingOnTheTop } from "./RestaurantCard";
 // import resData from "../utils/mockdata";
 import { useEffect, useState } from "react";
 import Shimemr from "./Shimemr";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "./useOnlineStatus";
+
+const RatingOnTheTop = ratingOnTheTop(RestaurantCard);
 
 const Body = () => {
   // const [listofRestaurants, setListofRestaurant] = useState([]);
@@ -13,6 +15,7 @@ const Body = () => {
   const [listofRestaurants, setListofRestaurant] = useState([]);
   const [filterdRestaurant, setFilterdRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
+  console.log(listofRestaurants);
   useEffect(() => {
     fetchData();
     console.log("USEffect array");
@@ -83,7 +86,13 @@ const Body = () => {
           {filterdRestaurant.map((e) => {
             return (
               <Link key={e.info.id} to={"/restaurants/" + e.info.id}>
-                <RestaurantCard menuName={e} />
+                {/* {we have show actually promoted but now we are showing id on the top 
+                main purpose is to learn what is higher order function } */}
+                {e.info.areaName === 'Baner' ? (
+                  <RatingOnTheTop menuName={e} />
+                ) : (
+                  <RestaurantCard menuName={e} />
+                )}
               </Link>
             );
           })}
