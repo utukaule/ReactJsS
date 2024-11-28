@@ -40,9 +40,12 @@ function RestaurantMenu() {
       <ul>
         {itemCards.map((item) => {
           return (
-            <li key={item.card.info.id}>
+            <>
+            <li style={{marginBottom:'30px'}} key={item.card.info.id}>
               {item.card.info.name} - ₹{item.card.info.price / 100}/-
+            <Link className="" style={{backgroundColor:"black",color:"white",padding:"10px 5px"}} >+Add</Link>
             </li>
+            </>
           );
         })}
       </ul>
