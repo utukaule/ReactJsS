@@ -1,0 +1,3 @@
+1. What is react CDN?
+2. What is crossOrigin in script tag?
+3. 

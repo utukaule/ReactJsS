@@ -1,4 +1,4 @@
-import { lazy,Suspense } from "react";
+import { lazy, Suspense } from "react";
 import img from "./assets/Finallogo.png";
 import Body from "./components/Body.js";
 import Header from "./components/Header.js";
@@ -8,13 +8,15 @@ import About from "./components/About.js";
 import Contact from "./components/Contact.js";
 import Error from "./components/Error.js";
 import RestaurantMenu from "./components/RestaurantMenu.js";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore.js";
 // import Grocery from "./components/Grocery.js";
 
 const Grocery = lazy(() => import("./components/Grocery.js"));
 
 function App() {
   return (
-    <>
+    <Provider store={appStore}>
       <Router>
         <Header img={img} />
         <Routes>
@@ -22,11 +24,18 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/restaurants/:resId" element={<RestaurantMenu />} />
-          <Route path="/grocery" element={<Suspense fallback={<h1>loading...</h1>}><Grocery /></Suspense>} />
+          <Route
+            path="/grocery"
+            element={
+              <Suspense fallback={<h1>loading...</h1>}>
+                <Grocery />
+              </Suspense>
+            }
+          />
         </Routes>
         <Footer />
       </Router>
-    </>
+    </Provider>
   );
 }
 
