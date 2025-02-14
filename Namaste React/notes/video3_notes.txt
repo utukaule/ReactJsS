@@ -1,0 +1,33 @@
+1. JSX ?
+    - JSX is not html
+    - JSX is like html but not html
+    - JSX also keep the security -> cross scripting
+    
+2. - js engin is not understanding jsx.
+    - js engin will understand ES6 (ECMA Script)
+    - all react code is coded in jsx   
+    - the jsx code is transplied by using parcel
+        - parcel is like manager and it handles multiple libraries so this 
+          jsx code conversion is done by babbel. (actually babbel is transpiling code)
+        - means jsx code is converted into browser understanding language.
+        - Actully the jsx code is transpiled before it reaches the JS engin
+        - Babbel transpiles the code as per the browser version
+        - JSX code ==> babble transpiles it in React.createElement() ==> ReactElement - JS Object ==> HTMLElement(render) ^^^^^^^^^^^^^^^^^^
+        - Babbel read each and every character < h > H e l l o < / h > one by one
+        - () use if we are writting jsx in multiple line
+
+3. What is component?
+    - Class based component
+        - uses class
+    - Functional based component
+        - uses Function
+
+4. React functional component   
+    - A function that returns JSX code that is react functional components
+    - Also note that when before returning the JSX code it is converted into the language that JS engin 
+      understand.
+      
+5. Component Composition
+    - composing 1 component in another component
+
+6. 

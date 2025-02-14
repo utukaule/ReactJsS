@@ -1,0 +1,27 @@
+{
+  "name": "video_1_again",
+  "version": "1.0.0",
+  "description": "this is namaste react by utu",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "utu",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browsersList": [
+    "last 2 Chrome version",
+    "last 2 Firefox version"
+  ]
+}
