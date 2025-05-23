@@ -1,0 +1,23 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.nav-link > ul {
+  list-style-type: none;
+  display: flex;
+}
+.nav-link >ul >li {
+  padding:10px
+}
+
+.card{
+  border: 1px solid black;
+  
+}
+
+.restro-list{
+  display: flex;
+  flex-wrap: wrap;
+}
